@@ -1,0 +1,402 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dl-size-size-large: 144px;
+  --dl-size-size-small: 48px;
+  --dl-color-gray-black: #252424ff;
+  --dl-color-gray-white: #ffffff;
+  --dl-size-size-medium: 96px;
+  --dl-size-size-xlarge: 192px;
+  --dl-size-size-xsmall: 16px;
+  --dl-space-space-unit: 16px;
+  --dl-color-colors-cyan: #00adb5ff;
+  --dl-color-colors-grey: #b6b6b6ff;
+  --dl-color-colors-pink: #da0f75ff;
+  --dl-color-colors-skin: #ff8e9eff;
+  --dl-size-size-xxlarge: 288px;
+  --dl-size-size-maxwidth: 1400px;
+  --dl-color-colors-orange: #ffab00ff;
+  --dl-color-colors-purple: #9a20bdff;
+  --dl-radius-radius-round: 50%;
+  --dl-space-space-halfunit: 8px;
+  --dl-space-space-sixunits: 96px;
+  --dl-space-space-twounits: 32px;
+  --dl-radius-radius-radius2: 2px;
+  --dl-radius-radius-radius4: 4px;
+  --dl-radius-radius-radius8: 8px;
+  --dl-space-space-fiveunits: 80px;
+  --dl-space-space-fourunits: 64px;
+  --dl-color-colors-neongreen: #80ff44ff;
+  --dl-space-space-threeunits: 48px;
+  --dl-space-space-oneandhalfunits: 24px;
+}
+
+@font-face {
+  font-family: 'DRAGON_HUNTER';
+  //   src: url('/playground_assets/fonts/DRAGONHUNTER.eot');
+  //   src:
+  //     url('/playground_assets/fonts/DRAGONHUNTER.eot?#iefix') format('embedded-opentype'),
+  //     url('/playground_assets/fonts/DRAGONHUNTER.woff2') format('woff2'),
+  //     url('/playground_assets/fonts/DRAGONHUNTER.woff') format('woff'),
+  //     url('/playground_assets/fonts/DRAGONHUNTER.ttf') format('truetype'),
+  //     url('/playground_assets/fonts/DragonHunter-9Ynxj.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.dragonFont {
+  font-family: 'DRAGON_HUNTER';
+  letter-spacing: 3px;
+}
+
+.dragonFont2 {
+  font-family: 'DRAGON_HUNTER';
+  /* letter-spacing: 3px; */
+}
+
+.button {
+  color: var(--dl-color-gray-black);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.input {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.textarea {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.list {
+  width: 100%;
+  margin: 1em 0px 1em 0px;
+  display: block;
+  padding: 0px 0px 0px 1.5rem;
+  list-style-type: none;
+  list-style-position: outside;
+}
+.list-item {
+  display: list-item;
+}
+.teleport-show {
+  display: flex !important;
+  transform: none !important;
+}
+.colortext {
+  color: tranparent;
+  -webkit-background-clip: text;
+}
+.cursor_pointer {
+  cursor: pointer;
+}
+.HeaderOnHoverTextColorful {
+  transition: 0.3s ease-in;
+}
+.HeaderOnHoverTextColorful:hover {
+  color: transparent;
+  transition: 0.3s ease-out;
+  background-image: url('https://media.tenor.com/lveDtTE8Ek8AAAAM/rainbow-swirls-relaxing.gif');
+  -webkit-background-clip: text;
+}
+.HeaderOnHoverTextColorful:active {
+  color: transparent;
+  background-image: url('https://media.tenor.com/lveDtTE8Ek8AAAAM/rainbow-swirls-relaxing.gif');
+  -webkit-background-clip: text;
+}
+.FadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+.on-hover-pink {
+  color: #da0f75ff;
+}
+.fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInRight;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInLeft;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+}
+.social {
+  width: 24px;
+  cursor: pointer;
+  height: 24px;
+  object-fit: cover;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.social:hover {
+  opacity: 0.5;
+}
+.footer-header {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 20px;
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 500;
+  //   line-height: 30px;
+}
+.footer-link {
+  color: rgb(204, 204, 204);
+  font-size: 14px;
+  font-family: Poppins;
+  //   line-height: 21px;
+}
+.feature {
+  gap: var(--dl-space-space-halfunit);
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: center;
+}
+.feature-active {
+  border-color: #80ff44;
+  border-bottom-width: 9px;
+}
+.feature-active2 {
+  border-color: #80ff44;
+  border-bottom-width: 4px;
+}
+.feature-active3 {
+  border-color: #80ff44;
+  border-bottom-width: 4px;
+}
+.colortexter {
+  color: transparent;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url('https://media.tenor.com/lveDtTE8Ek8AAAAM/rainbow-swirls-relaxing.gif');
+  -webkit-background-clip: text;
+}
+.section-head {
+  color: rgb(128, 255, 68);
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.section-heading {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 600;
+  //   line-height: 48px;
+}
+.section-description {
+  color: rgb(204, 204, 204);
+  width: 100%;
+  max-width: 600px;
+  font-family: Poppins;
+  //   line-height: 28px;
+}
+.section-heading1 {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 600;
+  //   line-height: 48px;
+}
+.side {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backdrop-filter: blur(130px);
+}
+.outliner {
+  color: transparent;
+  -webkit-text-stroke: 2px #da0f75;
+}
+.outlineColorChanger {
+  animation: outline-color 10s linear 1s infinite;
+}
+
+.shadowcolorchanger_hover:hover {
+  animation: shadow-color 10s infinite linear;
+}
+.shadowcolorchanger {
+  animation: shadow-color 10s infinite linear;
+}
+.border-image-idle {
+  border-image: url(https://media.tenor.com/lveDtTE8Ek8AAAAM/rainbow-swirls-relaxing.gif) 1 stretch;
+}
+.white-shadow {
+  text-shadow: 2px 2px white;
+}
+.color-card-hover {
+  transition: 0.3s ease-out;
+}
+.color-card-hover:hover {
+  transition: 0.3s ease-in;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.green-outliner {
+  color: transparent;
+  -webkit-text-stroke: 2px #80ff44;
+}
+.pink-outliner {
+  color: transparent;
+  -webkit-text-stroke: 2px #da0f75;
+}
+.cyan-outliner {
+  color: transparent !important;
+  -webkit-text-stroke: 2px #00adb5 !important;
+}
+.orange-outliner {
+  color: transparent;
+  -webkit-text-stroke: 2px #ffab00;
+}
+.cursor-default {
+  cursor: default;
+}
+.imagezoomer {
+  transition: 0.2s ease-in;
+}
+.imagezoomer:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-out;
+}
+.border-image {
+  border-image: url(https://media.tenor.com/lveDtTE8Ek8AAAAM/rainbow-swirls-relaxing.gif) 1 stretch;
+}
+.Heading {
+  font-size: 42px;
+  font-family: Poppins;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+}
+.Content {
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 300;
+  text-transform: none;
+  text-decoration: none;
+}
+.H2 {
+  font-size: 40px;
+  font-family: Poppins;
+  font-weight: 600;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.rotateLeft {
+  rotate: 4deg;
+}
+.rotateRight {
+  rotate: -4deg;
+}
+.littleDown {
+  margin-top: 30px;
+}
+
+.hideMax {
+  display: none !important;
+}
+.showMax {
+  display: initial !important;
+}
+@media (max-width: 992px) {
+  .hide992 {
+    display: none !important;
+  }
+  .show992 {
+    display: initial !important;
+  }
+}
+@media (max-width: 768px) {
+  .topNotch {
+    font-size: 30px;
+  }
+  .hide768 {
+    display: none !important;
+  }
+  .show768 {
+    display: initial !important;
+  }
+  .rotateLeft {
+    rotate: 0deg;
+  }
+  .rotateRight {
+    rotate: 0deg;
+  }
+  .littleDown {
+    margin-top: 0px;
+  }
+}
+/* style setter ============================ */
+@media (max-width: 479px) {
+  .h2er {
+    font-size: 24px !important;
+  }
+  .texter {
+    font-size: 16px !important;
+  }
+  .h2erc {
+    font-size: 22px !important;
+  }
+  .h1er {
+    font-size: 50px !important;
+  }
+  .px30 {
+    font-size: 30px !important;
+  }
+  .px35 {
+    font-size: 35px !important;
+  }
+  .pc40 {
+    font-size: 40px !important;
+  }
+  .gtw {
+    color: white !important;
+  }
+  .wtg {
+    color: #80ff44 !important;
+  }
+  .px28 {
+    font-size: 24px !important;
+  }
+  .px15 {
+    font-size: 15px;
+  }
+}
